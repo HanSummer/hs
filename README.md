@@ -2,7 +2,7 @@
 
 Vue, Angular, React
 
-## 阶段
+## HS阶段
 
 ### 第一阶段: 基于Angular开发
 
