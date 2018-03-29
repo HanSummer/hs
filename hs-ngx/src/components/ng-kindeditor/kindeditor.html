@@ -1,0 +1,8 @@
+<!-- Note @link(http://kindeditor.net/docs/usage.html)
+    1. id在当前页面必须是唯一的值。
+    2. 在textarea里设置HTML内容即可实现编辑，在这里需要注意的是，如果从服务器端程序(ASP、PHP、ASP.NET等)直接显示内容，则必须转换HTML特殊字符(>,<,&,”)。具体请参考各语言目录下面的demo.xxx程序，目前支持ASP、ASP.NET、PHP、JSP。
+    3. 在有些浏览器上不设宽度和高度可能显示有问题，所以最好设一下宽度和高度。宽度和高度可用inline样式设置，也可用 编辑器初始化参数 设置
+ -->
+<div class="kindeditor-component">
+    <textarea [id]="id" name="content" [(ngModel)]="outContent"></textarea>
+</div>

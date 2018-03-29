@@ -1,0 +1,17 @@
+<span #picker class="picker-wraped" (clickOutside)="onClickedOutside($event)">
+    <ng-input [class]="inputClass" [readonly]="!editable || readonly" [elDisabled]="elDisabled" [size]="size" [placeholder]="placeholder"
+        [icon]="iconShowClose ? 'close' : 'date'" [model]="model" (icon-click)="iconClickHandle($event)" (modelChange)="changeHandle($event)"
+        (icon-mouseenter)="iconMouseActionHandle(true)" (icon-mouseleave)="iconMouseActionHandle(false)" (focus)="focusHandle()"
+        (blur)="blurHandle()">
+    </ng-input>
+    <ng-template [ngIf]="type==='date'">
+        <el-data-picker-panel [show]="showPanelPicker" [hidden-day]="hiddenDay" [panel-absolute]="panelAbsolute" [panel-index]="panelIndex"
+            [width]="panelWidth" [model]="value" [shortcuts]="pickerOptions?.shortcuts" (modelChange)="dateChangeHandle($event)">
+        </el-data-picker-panel>
+    </ng-template>
+    <ng-template [ngIf]="type==='daterange'">
+        <el-date-range-picker-panel #dateRangePicker [show]="showPanelPicker" [hidden-day]="hiddenDay" [panel-absolute]="panelAbsolute"
+            [panel-index]="panelIndex" [width]="panelWidth" [model]="value" [shortcuts]="pickerOptions?.shortcuts" (modelChange)="dateChangeHandle($event)">
+        </el-date-range-picker-panel>
+    </ng-template>
+</span>

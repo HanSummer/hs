@@ -1,0 +1,13 @@
+<el-date-picker (modelChange)="handle($event)" (clear-click)="clearClickHandle($event)" [type]="'daterange'" [picker-options]="pickerOptions2">
+</el-date-picker>
+
+<div style="margin-bottom: 20px;"></div>
+
+<el-date-picker (modelChange)="handle($event)" (clear-click)="clearClickHandle($event)" [type]="'date'" [picker-options]="pickerOptions1">
+</el-date-picker>
+
+<div style="margin-bottom: 20px;"></div>
+
+<button (click)="testApp()" style="margin-bottom: 20px;width: 60px;height: 30px;">测试</button>
+
+<ng-kindeditor [(ngModel)]="content"></ng-kindeditor>

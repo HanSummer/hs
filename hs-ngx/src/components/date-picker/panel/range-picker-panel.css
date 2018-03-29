@@ -1,0 +1,22 @@
+.el-picker-panel-absolute {
+    position: absolute;
+}
+
+.popper__arrow {
+    top: -6px;
+    left: 20%;
+    margin-right: 3px;
+    border-top-width: 0;
+    border-bottom-color: #ebeef5;
+}
+
+.el-popper .popper__arrow::after {
+    top: 1px;
+    margin-left: -6px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+
+.el-date-editor--daterange.el-input {
+    width: 220px!important;
+}

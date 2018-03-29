@@ -1,0 +1,12 @@
+.icon-disabled {
+    cursor: not-allowed;
+}
+
+.icon-disabled:before {
+    cursor: not-allowed;
+}
+
+.icon-pointer {
+    cursor: pointer;
+}
+

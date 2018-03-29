@@ -1,0 +1,41 @@
+<div [@dropAnimation]="show" [ngStyle]="{ 'z-index': panelIndex}" [class]="'el-picker-panel el-date-range-picker el-popper'"
+    [class.has-sidebar]="shortcuts" [class.has-time]="showTime" [class.el-picker-panel-absolute]="panelAbsolute">
+    <div class="el-picker-panel__body-wrapper">
+        <div class="el-picker-panel__sidebar" *ngIf="shortcuts">
+            <button type="button" class="el-picker-panel__shortcut" *ngFor="let shortcut of shortcuts" (click)="handleShortcutClick(shortcut)">
+                {{ shortcut.text }}
+            </button>
+        </div>
+        <div class="el-picker-panel__body">
+            <div class="el-picker-panel__content el-date-range-picker__content is-left">
+                <div class="el-date-range-picker__header">
+                    <button type="button" (click)="leftPrevYear()" class="el-picker-panel__icon-btn el-icon-d-arrow-left"></button>
+                    <button type="button" (click)="leftPrevMonth()" class="el-picker-panel__icon-btn el-icon-arrow-left"></button>
+                    <button type="button" (click)="leftNextYear()" *ngIf="unlinkPanels" [disabled]="!enableYearArrow" [class.is-disabled]="!enableYearArrow"
+                        class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
+                    <button type="button" (click)="leftNextMonth()" *ngIf="unlinkPanels" [disabled]="!enableMonthArrow" [class.is-disabled]="!enableMonthArrow"
+                        class="el-picker-panel__icon-btn el-icon-arrow-right"></button>
+                    <div>{{ leftLabel }}</div>
+                </div>
+                <el-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
+                    [model]="leftDate" [rangeState]="rangeState" [minDate]="minDate" [maxDate]="maxDate" selectionMode="range">
+                </el-date-table>
+            </div>
+            <div class="el-picker-panel__content el-date-range-picker__content is-right">
+                <div class="el-date-range-picker__header">
+                    <button type="button" (click)="rightPrevYear()" *ngIf="unlinkPanels" [disabled]="!enableYearArrow" [class.is-disabled]="!enableYearArrow"
+                        class="el-picker-panel__icon-btn el-icon-d-arrow-left"></button>
+                    <button type="button" (click)="rightPrevMonth()" *ngIf="unlinkPanels" [disabled]="!enableMonthArrow" [class.is-disabled]="!enableMonthArrow"
+                        class="el-picker-panel__icon-btn el-icon-arrow-left"></button>
+                    <button type="button" (click)="rightNextYear()" class="el-picker-panel__icon-btn el-icon-d-arrow-right"></button>
+                    <button type="button" (click)="rightNextMonth()" class="el-picker-panel__icon-btn el-icon-arrow-right"></button>
+                    <div>{{ rightLabel }}</div>
+                </div>
+                <el-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
+                    [model]="rightDate" [rangeState]="rangeState" [minDate]="minDate" [maxDate]="maxDate" selectionMode="range">
+                </el-date-table>
+            </div>
+        </div>
+    </div>
+    <div class="popper__arrow"></div>
+</div>
