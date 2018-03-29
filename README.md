@@ -26,8 +26,8 @@ Vue, Angular, React
 
 ## 参考资源
 
-ElemeFE: git@github.com:ElemeFE/element.git
+ElemeFE: https://github.com/ElemeFE/element
 
-eleme  : git@github.com:eleme/element-angular.git
+eleme  : https://github.com/eleme/element-angular.git
 
 ff755  : https://github.com/ff755/vue-kindeditor
