@@ -31,3 +31,6 @@ ElemeFE: https://github.com/ElemeFE/element
 eleme  : https://github.com/eleme/element-angular.git
 
 ff755  : https://github.com/ff755/vue-kindeditor
+
+## LICENSE
+[MIT](LICENSE)
