@@ -23,7 +23,7 @@ export type RangeState = {
 }
 
 @Component({
-  selector: 'el-date-table',
+  selector: 'hs-date-table',
   providers: [DateFormat],
   template: `
     <table class="el-date-table" cellspacing="0" cellpadding="0" (mousemove)="handleMouseMove($event)">

@@ -30,12 +30,12 @@
             </div>
 
             <div class="el-picker-panel__content">
-                <el-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" [model]="model" [value]="model">
-                </el-date-table>
-                <el-year-table *ngIf="currentView === 'year'" [model]="model" (modelChange)="yearPickChangeHandle($event)" [disabled-date]="disabledDate">
-                </el-year-table>
-                <el-month-table *ngIf="currentView === 'month'" [model]="model" (modelChange)="monthPickChangeHandle($event)" [disabled-date]="disabledDate">
-                </el-month-table>
+                <hs-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" [model]="model" [value]="model">
+                </hs-date-table>
+                <hs-year-table *ngIf="currentView === 'year'" [model]="model" (modelChange)="yearPickChangeHandle($event)" [disabled-date]="disabledDate">
+                </hs-year-table>
+                <hs-month-table *ngIf="currentView === 'month'" [model]="model" (modelChange)="monthPickChangeHandle($event)" [disabled-date]="disabledDate">
+                </hs-month-table>
             </div>
         </div>
     </div>

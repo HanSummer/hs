@@ -22,7 +22,7 @@ export type DateModelItem = {
 }
 
 @Component({
-  selector: 'el-data-picker-panel',
+  selector: 'hs-data-picker-panel',
   animations: [dropAnimation],
   styleUrls: ['./range-picker-panel.css'],
   templateUrl: './picker-panel.html'
