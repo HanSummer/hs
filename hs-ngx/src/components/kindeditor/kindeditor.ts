@@ -4,6 +4,9 @@ import {
   OnDestroy,
   OnInit,
   AfterViewInit,
+  Renderer2,
+  ElementRef,
+  ViewChild
 } from '@angular/core';
 import {
   ControlValueAccessor,
@@ -35,7 +38,7 @@ export class NgKindEditor extends KindEditorProps implements OnInit, AfterViewIn
    * @link(http://kindeditor.net/docs/usage.html)
    */
   id: string = '';
-  
+
   /**
    * kindeditor根据id创建的editor实例
    */
@@ -61,7 +64,10 @@ export class NgKindEditor extends KindEditorProps implements OnInit, AfterViewIn
     this.controlChange(val);
   }
 
-  constructor() {
+  @ViewChild('kindeditorTextarea') _textAreaEL: ElementRef
+  _textAreaPreviousEL: any
+
+  constructor(private el: ElementRef, private r2: Renderer2) {
     super()
   }
 
@@ -71,6 +77,7 @@ export class NgKindEditor extends KindEditorProps implements OnInit, AfterViewIn
 
   ngAfterViewInit(): void {
     this.initEditor();
+    this._textAreaPreviousEL = this._textAreaEL.nativeElement.previousSibling;
   }
 
   ngOnDestroy(): void {
@@ -126,8 +133,16 @@ export class NgKindEditor extends KindEditorProps implements OnInit, AfterViewIn
         that.content = this.html();
       },
       afterTab: this.afterTab,
-      afterFocus: this.afterFocus,
-      afterBlur: this.afterBlur,
+      afterFocus: function () {
+        if (that._textAreaPreviousEL) {
+          that.r2.addClass(that._textAreaPreviousEL, 'focus')
+        }
+      },
+      afterBlur: function () {
+        if (that._textAreaPreviousEL) {
+          that.r2.removeClass(that._textAreaPreviousEL, 'focus')
+        }
+      },
       afterUpload: this.afterUpload,
       uploadJson: this.uploadJson,
       fileManagerJson: this.fileManagerJson,

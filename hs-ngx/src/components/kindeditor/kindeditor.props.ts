@@ -98,8 +98,31 @@ export class KindEditorProps {
      *  template	插入模板
      *  anchor	插入锚点
      * ```
-     */
-    @Input() items: Array<string> = [
+     * 
+     * ```
+     *  Tools 列表
+        var bugTools =
+        [ 'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic','underline', '|', 
+        'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|',
+        'emoticons', 'image', 'code', 'link', '|', 'removeformat','undo', 'redo', 'fullscreen', 'source', 'about'];
+
+        var simpleTools = 
+        [ 'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic','underline', '|', 
+        'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|',
+        'emoticons', 'image', 'code', 'link', '|', 'removeformat','undo', 'redo', 'fullscreen', 'source', 'about'];
+
+        var fullTools = 
+        [ 'formatblock', 'fontname', 'fontsize', 'lineheight', '|', 'forecolor', 'hilitecolor', '|', 'bold', 'italic','underline', 'strikethrough', '|',
+        'justifyleft', 'justifycenter', 'justifyright', 'justifyfull', '|',
+        'insertorderedlist', 'insertunorderedlist', '|',
+        'emoticons', 'image', 'insertfile', 'hr', '|', 'link', 'unlink', '/',
+        'undo', 'redo', '|', 'selectall', 'cut', 'copy', 'paste', '|', 'plainpaste', 'wordpaste', '|', 'removeformat', 'clearhtml','quickformat', '|',
+        'indent', 'outdent', 'subscript', 'superscript', '|',
+        'table', 'code', '|', 'pagebreak', 'anchor', '|', 
+        'fullscreen', 'source', 'preview', 'about'];
+
+        var defaultTools = 
+        [
         'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
         'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
         'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
@@ -108,7 +131,12 @@ export class KindEditorProps {
         'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
         'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
         'anchor', 'link', 'unlink', '|', 'about'
-    ]
+        ]
+     * ```
+     */
+    @Input() items: Array<string> = ['formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', '|',
+        'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|',
+        'emoticons', 'image', 'code', 'link', '|', 'removeformat', 'undo', 'redo', 'fullscreen', 'source', 'about']
     /**
      * designMode 为false时(即代码模式)，要保留的工具栏图标。
      * 
@@ -611,7 +639,7 @@ export class KindEditorProps {
      * 默认值: false
      */
     @Input() fixToolBar: boolean = false;
-    
+
 
     /** 总共 58 */
 }
