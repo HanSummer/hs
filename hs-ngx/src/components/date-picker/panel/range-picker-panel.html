@@ -17,9 +17,9 @@
                         class="el-picker-panel__icon-btn el-icon-arrow-right"></button>
                     <div>{{ leftLabel }}</div>
                 </div>
-                <el-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
+                <hs-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
                     [model]="leftDate" [rangeState]="rangeState" [minDate]="minDate" [maxDate]="maxDate" selectionMode="range">
-                </el-date-table>
+                </hs-date-table>
             </div>
             <div class="el-picker-panel__content el-date-range-picker__content is-right">
                 <div class="el-date-range-picker__header">
@@ -31,9 +31,9 @@
                     <button type="button" (click)="rightNextMonth()" class="el-picker-panel__icon-btn el-icon-arrow-right"></button>
                     <div>{{ rightLabel }}</div>
                 </div>
-                <el-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
+                <hs-date-table *ngIf="currentView === 'date' && !hiddenDay" (modelChange)="datePickChangeHandle($event)" (changerange)="handleChangeRange($event)"
                     [model]="rightDate" [rangeState]="rangeState" [minDate]="minDate" [maxDate]="maxDate" selectionMode="range">
-                </el-date-table>
+                </hs-date-table>
             </div>
         </div>
     </div>

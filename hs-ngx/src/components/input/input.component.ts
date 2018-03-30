@@ -9,7 +9,7 @@ import { getTextareaHeight, isParentTag } from './util';
 
 
 @Component({
-  selector: 'ng-input',
+  selector: 'hs-input',
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => Input),

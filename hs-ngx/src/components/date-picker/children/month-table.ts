@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core'
 
 @Component({
-  selector: 'el-month-table',
+  selector: 'hs-month-table',
   template: `
     <table class="el-month-table">
       <tbody>

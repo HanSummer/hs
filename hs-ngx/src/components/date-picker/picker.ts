@@ -5,7 +5,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms'
 import { ElDateRangePickerPanel } from './panel/range-picker-panel';
 
 @Component({
-  selector: 'el-date-picker',
+  selector: 'hs-date-picker',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

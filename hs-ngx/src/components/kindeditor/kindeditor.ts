@@ -14,7 +14,7 @@ import { KindEditorProps } from './kindeditor.props';
 declare var window;
 
 @Component({
-  selector: 'ng-kindeditor',
+  selector: 'hs-kindeditor',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

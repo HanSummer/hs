@@ -15,7 +15,7 @@ import {
 } from '../utils'
 
 @Component({
-  selector: 'el-date-range-picker-panel',
+  selector: 'hs-date-range-picker-panel',
   animations: [dropAnimation],
   styleUrls: ['./range-picker-panel.css'],
   templateUrl: './range-picker-panel.html',

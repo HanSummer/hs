@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InputModule } from '../components/input/input.module';
 import { ElDateModule } from '../components/date-picker/module';
-import { KindEditorModule } from '../components/ng-kindeditor/kindeditor.module';
+import { KindEditorModule } from '../components/kindeditor/kindeditor.module';
 
 import { AppComponent } from './app.component';
 
